@@ -41,32 +41,46 @@ def callback():
     return 'OK'
 
 
-global wooo 
-wooo = 0
-
-global start 
-start = 0     #0¥è•Â 1¥ŠJn
-
-global answer 
-ansewr = 0
-
-global ansmuch
-ansmuch = 0
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-  global start
-  global wooo
-  global answer
+  
+    if event.message.text == "123" and len(event.message.text) == 2  :
+            startqq =  random.randint(0,100)
+            wooo = wooo+1
+            if wooo > 3 :
+               wooo = 0 
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("1")) 
+               return 0
 
-   
-    if event.message.text == "wooo" :
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(wooo))
-        return 0
+            if startqq == 100:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("2"))
+               return 0
 
+            if startqq == 0:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("3"))
+               return 0
 
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(str(aans)+"A"+str(bans)+"B"))
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(str(int(perans/1000))+"  "+str(answer/1000))) 
+            if startqq >0 and startqq <20:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("4"))
+               return 0
+
+            if startqq >=20 and startqq <40:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("5"))
+               return 0
+
+            if startqq >=40 and startqq <60:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("6"))
+               return 0
+
+            if startqq >=60 and startqq <80:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("7"))
+               return 0
+
+            if startqq >=80 and startqq <100:
+               line_bot_api.reply_message(event.reply_token,TextSendMessage("8"))
+               return 0
+
     return 0
     
     
