@@ -15,13 +15,11 @@ from linebot.models import (MessageEvent, TextMessage, TextSendMessage, ImageSen
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('x49A0ZbuY2RE8BxTthzM4wIg4XnwavPosNJL3oGh/RxOOSHAwHiXL53cDNSMN1uxB18tW4C5fajGPDlmUeomHHg1DX+JuwTOfX/ZmIhQhlQPnXq/28lwGUgIPag1HJPsh+eLcUMIsMgBk7TvlAmMWAdB04t89/1O/w1cDnyilFU=
-')
+line_bot_api = LineBotApi('x49A0ZbuY2RE8BxTthzM4wIg4XnwavPosNJL3oGh/RxOOSHAwHiXL53cDNSMN1uxB18tW4C5fajGPDlmUeomHHg1DX+JuwTOfX/ZmIhQhlQPnXq/28lwGUgIPag1HJPsh+eLcUMIsMgBk7TvlAmMWAdB04t89/1O/w1cDnyilFU=')
 
 
 # Channel Secret
-handler = WebhookHandler('5fcc70c48caf46c18b81d2cb910803bb
-')
+handler = WebhookHandler('5fcc70c48caf46c18b81d2cb910803bb')
 
 # äƒ„„èäóLò“é© /callback ìI Post Request
 @app.route("/callback", methods=['POST'])
