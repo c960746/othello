@@ -21,7 +21,7 @@ line_bot_api = LineBotApi('x49A0ZbuY2RE8BxTthzM4wIg4XnwavPosNJL3oGh/RxOOSHAwHiXL
 # Channel Secret
 handler = WebhookHandler('5fcc70c48caf46c18b81d2cb910803bb')
 
-# ���㏊�L�Ҏ� /callback �I Post Request
+# ŠÄããŠ—L˜ÒŽ© /callback “I Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
@@ -45,41 +45,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
   
-    if event.message.text == "123" and len(event.message.text) == 2  :
-            startqq =  random.randint(0,100)
-            wooo = wooo+1
-            if wooo > 3 :
-               wooo = 0 
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("1")) 
-               return 0
-
-            if startqq == 100:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("2"))
-               return 0
-
-            if startqq == 0:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("3"))
-               return 0
-
-            if startqq >0 and startqq <20:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("4"))
-               return 0
-
-            if startqq >=20 and startqq <40:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("5"))
-               return 0
-
-            if startqq >=40 and startqq <60:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("6"))
-               return 0
-
-            if startqq >=60 and startqq <80:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("7"))
-               return 0
-
-            if startqq >=80 and startqq <100:
-               line_bot_api.reply_message(event.reply_token,TextSendMessage("8"))
-               return 0
+        if event.message.text == "123" :
+        line_bot_api.reply_message(event.reply_token,TextSendMessage("???????"))   
+        return 0
 
     return 0
     
